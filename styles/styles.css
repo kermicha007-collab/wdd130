@@ -13,17 +13,27 @@
 nav {
     background-color: darkblue;
     padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 nav a {
     color: white;
     display: block;
-    padding: 20px;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 1.2rem;
 }
 
 h1 {
     color: darkblue;
     text-align: center;
+    border-bottom: 2px solid darkblue;
+}
+
+main {
+    grid-column: 2/3;
 }
 
 img {
@@ -39,14 +49,12 @@ p {
     color: var(--text-color)
 }
 
-main {
-    max-width: 840px;
-}
-
 aside {
     width: 20rem;
     color: var(--text-color);
     position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 
 aside img {
@@ -85,4 +93,16 @@ footer {
     padding: 1rem;
     background-color: #ebc68794;
     color: var(--text-color);
+}
+
+.grid,
+header,
+footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
